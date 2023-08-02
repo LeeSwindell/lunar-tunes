@@ -24,13 +24,13 @@ function App() {
 
   return (
     <>
-    <div className="absolute w-screen min-h-screen bottom-0">
-      <div className="w-[1280px] h-[832px] ml-auto mr-auto">
+    <div className="absolute w-[90vw] h-[90vh] bottom-0 right-[5vw]">
+      {/* <div className="ml-auto mr-auto"> */}
         <BackgroundSVG />
-      </div>
+      {/* </div> */}
     </div>
     <div className="flex flex-col w-screen min-h-screen">
-      <div className="w-screen h-24 border-sky-50">
+      <div className="w-screen h-[10vh] border-sky-50">
         <img src={logo} className="p-2 w-24 h-24" />
       </div>
       {/* <div className="flex flex-row w-screen h-[80vh] my-8">
