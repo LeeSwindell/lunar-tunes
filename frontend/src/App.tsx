@@ -1,5 +1,10 @@
 import { useState } from "react"
 import AudioPlayer from "./AudioPlayer";
+import logo from "/logo.svg";
+import tallSpeakerSVG from "/speaker-tall.svg";
+import turntableSVG from "/turntable.svg";
+import TurntableSVG from "./turntable/turntable";
+import BackgroundSVG from "./turntable/backgrounds";
 
 function App() {
   const [currentSong, setCurrentSong] = useState<string>('');
@@ -19,7 +24,25 @@ function App() {
 
   return (
     <>
-    <div className='flex flex-col w-full h-screen justify-center place-items-center'>
+    <div className="absolute w-screen min-h-screen bottom-0">
+      <div className="w-[1280px] h-[832px] ml-auto mr-auto">
+        <BackgroundSVG />
+      </div>
+    </div>
+    <div className="flex flex-col w-screen min-h-screen">
+      <div className="w-screen h-24 border-sky-50">
+        <img src={logo} className="p-2 w-24 h-24" />
+      </div>
+      {/* <div className="flex flex-row w-screen h-[80vh] my-8">
+        <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />
+        <TurntableSVG />
+        <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />
+      </div> */}
+    </div>
+    {/* <div className="absolute top-[82vh] right-1/2">
+      <AudioPlayer/>
+    </div> */}
+    {/* <div className='flex flex-col w-full h-screen justify-center place-items-center'>
       <div className='text-center p-4 border' >Currently Playing: {currentSong}</div>
       <div className='text-center p-4 text-violet-400 border' >ahhhhdsfdsafdsafdsafakdsajd</div>
       <button className='text-center p-4 rounded-lg border border-violet-400 hover:shadow hover:shadow-sky-50' onClick={fetchData}>
@@ -28,7 +51,7 @@ function App() {
       {currentSong &&
         <AudioPlayer />
       }
-    </div>
+    </div> */}
     </>
   )
 }
