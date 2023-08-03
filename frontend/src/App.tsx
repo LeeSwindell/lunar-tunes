@@ -5,6 +5,7 @@ import tallSpeakerSVG from "/speaker-tall.svg";
 import turntableSVG from "/turntable.svg";
 import TurntableSVG from "./turntable/turntable";
 import BackgroundSVG from "./turntable/backgrounds";
+import TitleText from "./SongTitle/TitleText.tsx";
 
 function App() {
   const [currentSong, setCurrentSong] = useState<string>('');
@@ -28,9 +29,14 @@ function App() {
       <BackgroundSVG />
     </div>
     <div className="flex flex-col w-screen min-h-screen">
-      <div className="flex flex-row w-screen h-[10vh] border-sky-50 justify-between border">
-        <img src={logo} className="p-2 w-24 h-24 border" />
+      <div className="flex flex-row w-screen h-[10vh] justify-between">
+        <img src={logo} className="p-2 w-24 h-24" />
         <AudioPlayer/>
+      </div>
+      <div className="ml-auto mr-auto">
+        <div id="TitleTextContainer" className="overflow-visible">
+          {TitleText("Clair de Lune")}
+        </div>
       </div>
       {/* <div className="flex flex-row w-screen h-[80vh] my-8">
         <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />
