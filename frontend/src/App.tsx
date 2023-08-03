@@ -25,13 +25,12 @@ function App() {
   return (
     <>
     <div className="absolute w-[90vw] h-[90vh] bottom-0 right-[5vw]">
-      {/* <div className="ml-auto mr-auto"> */}
-        <BackgroundSVG />
-      {/* </div> */}
+      <BackgroundSVG />
     </div>
     <div className="flex flex-col w-screen min-h-screen">
-      <div className="w-screen h-[10vh] border-sky-50">
-        <img src={logo} className="p-2 w-24 h-24" />
+      <div className="flex flex-row w-screen h-[10vh] border-sky-50 justify-between border">
+        <img src={logo} className="p-2 w-24 h-24 border" />
+        <AudioPlayer/>
       </div>
       {/* <div className="flex flex-row w-screen h-[80vh] my-8">
         <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />

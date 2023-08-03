@@ -22,7 +22,7 @@ const AudioPlayer: React.FC = () => {
 
   return (
     <div>
-      <audio ref={audioPlayerRef} controls />
+      <audio ref={audioPlayerRef} controls className='p-2'/>
     </div>
   );
 };
