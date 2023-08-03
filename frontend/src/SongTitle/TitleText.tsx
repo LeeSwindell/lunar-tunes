@@ -42,7 +42,6 @@ function TitleText (songTitle: string) {
 
     svg = svg.replace('<svg ', '<svg overflow="visible"')
     svg = svg.replace('<path ', '<path class="TitleTextPath" pathLength=1 strokeDashArray=1 strokeDashOffset=0 ')
-    console.log(svg)
     const container = document.getElementById("TitleTextContainer")
     if (container) {
       container.innerHTML = svg;

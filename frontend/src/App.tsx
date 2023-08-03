@@ -25,38 +25,20 @@ function App() {
 
   return (
     <>
-    <div className="absolute w-[90vw] h-[90vh] bottom-0 right-[5vw]">
+    <div className="absolute w-[90vw] h-[90vh] bottom-0 right-[5vw] -z-10">
       <BackgroundSVG />
     </div>
     <div className="flex flex-col w-screen min-h-screen">
       <div className="flex flex-row w-screen h-[10vh] justify-between">
         <img src={logo} className="p-2 w-24 h-24" />
-        <AudioPlayer/>
+        <AudioPlayer currentSong={currentSong} setCurrentSong={setCurrentSong}/>
       </div>
       <div className="ml-auto mr-auto">
         <div id="TitleTextContainer" className="overflow-visible">
-          {TitleText("Clair de Lune")}
+          {TitleText(currentSong)}
         </div>
       </div>
-      {/* <div className="flex flex-row w-screen h-[80vh] my-8">
-        <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />
-        <TurntableSVG />
-        <img src={tallSpeakerSVG} className="w-1/4 object-fit" alt="Tall Speaker" />
-      </div> */}
     </div>
-    {/* <div className="absolute top-[82vh] right-1/2">
-      <AudioPlayer/>
-    </div> */}
-    {/* <div className='flex flex-col w-full h-screen justify-center place-items-center'>
-      <div className='text-center p-4 border' >Currently Playing: {currentSong}</div>
-      <div className='text-center p-4 text-violet-400 border' >ahhhhdsfdsafdsafdsafakdsajd</div>
-      <button className='text-center p-4 rounded-lg border border-violet-400 hover:shadow hover:shadow-sky-50' onClick={fetchData}>
-        Play
-      </button>
-      {currentSong &&
-        <AudioPlayer />
-      }
-    </div> */}
     </>
   )
 }
