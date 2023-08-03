@@ -20,7 +20,7 @@ function TitleText (songTitle: string) {
     fetchFont();
   }, []);
   const text = songTitle;
-  const size = 80;
+  const size = 60;
   const [textModel, setTextModel] = useState<makerjs.IModel | null>(null);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function TitleText (songTitle: string) {
   } else {
     let svg = makerjs.exporter.toSVG(textModel, {
       stroke: "#F0F9FF",
-      strokeWidth: "4px",
+      strokeWidth: "3px",
       // fill: "#F0F9FF",
       className: "TitleText",
     });

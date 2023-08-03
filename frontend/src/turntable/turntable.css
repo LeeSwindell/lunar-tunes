@@ -11,4 +11,5 @@
 
 .etching {
   animation: dash 4s linear infinite;
+  animation-play-state: paused;
 }

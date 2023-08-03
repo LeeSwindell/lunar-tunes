@@ -14,6 +14,16 @@ const AudioPlayer: React.FC<SongProps> = ({ currentSong, setCurrentSong }) => {
       audioPlayerRef.current.play();
       setPaused(false);
       setCurrentSong('Clair de Lune')
+      const etch1 = document.getElementById("etching1")
+      if (etch1) {
+        const running = etch1.style.animationPlayState === 'running';
+        etch1.style.animationPlayState = running ? 'paused' : 'running';
+      }
+      const etch2 = document.getElementById("etching2")
+      if (etch2) {
+        const running = etch2.style.animationPlayState === 'running';
+        etch2.style.animationPlayState = running ? 'paused' : 'running';
+      }
     }
   };
 
@@ -21,6 +31,16 @@ const AudioPlayer: React.FC<SongProps> = ({ currentSong, setCurrentSong }) => {
     if (audioPlayerRef.current) {
       audioPlayerRef.current.pause();
       setPaused(true);
+      const ele = document.getElementById("etching1")
+      if (ele) {
+        const running = ele.style.animationPlayState === 'running';
+        ele.style.animationPlayState = running ? 'paused' : 'running';
+      }
+      const etch2 = document.getElementById("etching2")
+      if (etch2) {
+        const running = etch2.style.animationPlayState === 'running';
+        etch2.style.animationPlayState = running ? 'paused' : 'running';
+      }
     }
   };
 

@@ -1,9 +1,6 @@
 import { useState } from "react"
 import AudioPlayer from "./AudioPlayer";
 import logo from "/logo.svg";
-import tallSpeakerSVG from "/speaker-tall.svg";
-import turntableSVG from "/turntable.svg";
-import TurntableSVG from "./turntable/turntable";
 import BackgroundSVG from "./turntable/backgrounds";
 import TitleText from "./SongTitle/TitleText.tsx";
 
@@ -12,7 +9,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:8080/play'); // Replace with your API endpoint URL
+      const response = await fetch('http://localhost:8080/play');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
