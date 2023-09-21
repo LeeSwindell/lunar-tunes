@@ -3,7 +3,7 @@ import './turntable.css';
 
 function BackgroundSVG() {
     return (
-        <svg viewBox="0 0 1280 832" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex ml-auto mr-auto w-full h-full">
+        <svg viewBox="0 0 1280 832" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex ml-auto mr-auto w-40 h-40">
         <path d="M321 656.418H786.455" stroke="#F0F9FF" stroke-width="4" stroke-linecap="round"/>
         <path d="M321 656.194L495.545 353.873" stroke="#F0F9FF" stroke-width="4" stroke-linecap="round"/>
         <path d="M786.455 772.558L961 470.236" stroke="#F0F9FF" stroke-width="4" stroke-linecap="round"/>
